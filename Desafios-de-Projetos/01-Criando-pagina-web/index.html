@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+</head>
+
+<body>
+    <h1 id="inicio">Módulo 1 - Primeiros Passos com HTML</h1>
+    <hr />
+
+    <h2>Índice</h2>
+        <ul>
+            <li><a href="#estrutura">Estrutura básica</a></li>
+            <li><a href="#tags-atributos">O que são tags e seus atributos</a></li>
+            <li><a href="#formatando-textos">Formatando textos</a></li>
+            <li><a href="#adicionando-midias">Como adicionar mídias</a></li>
+            <li><a href="#referencias">Links de referências</a></li>
+        </ul>
+    <hr />
+
+    <h2 id="estrutura">Estrutura básica</h2>
+    <p>
+        Todo documento <u>HTML</u> deve começar com esta declaração <strong>!DOCTYPE</strong> que diz ao navegador que tipo de documento é esse.
+        Logo em seguida é preciso declarar a linguagem usada e para isso acrescenta-se <b>lang="pt-br"</b> que significa portugues, Brasil.
+        O chamado <u>metadado</u> vem em seguida, seria o <strong>head</strong>, responsável pelos dados do HTML, nele podem contér elementos como:<br>
+        <ul>
+            <li>title;</li>
+            <li>link;</li>
+            <li>style;</li>
+        </ul>
+        O <strong>head</strong> não aparece para o usuário, ao contrário do <strong>body</strong>, que vem logo em seguida. O <strong>body</strong> já é o corpo da página, é a parte que o usuário verá.
+        Ou seja, é nele que irá conter parágrafos, imagens, videos, tabelas, links etc. São as <strong>tags</strong> que ajudarão com isso. 
+        Com o tempo, a semântica do HTML mudou, e usa-se dentro do body, o <strong>header</strong> (cabeçalho), o <strong>main</strong> (parte principal, o corpo) e o <strong>footer</strong> (rodapé).
+    </p>
+    <a href="#inicio"><small>Voltar para o início</small></a>
+    
+    <h2 id="tags-atributos">O que são tags e seus atributos</h2>
+    <p>
+        As <strong>tags</strong> são elementos básicos que nos ajudam a estruturar nosso HTML, servindo para marcar e definir os tipos de conteúdo como textos, imagens, link e muito mais.
+        Toda tag começa com sinal de menor que (<), sinal de <u>abertura</u> e termina com sinal de maior que (>), sinal de <u>fechamento</u>, porém acrescenta-se uma barra (/) que indica que a tag está sendo fechada. Alguns exemplos de tags:
+        <ul>
+            <li><b>nav</b>: barra de navegação;</li>
+            <li><b>ul</b>: listas não ordenadas (sem numeração);</li>
+            <li><b>ol</b>: listas ordenadas (com numeração);</li>
+            <li><b>li</b>: itens da lista (geralmente usadas dentro das tags ul e ol);</li>
+            <li><b>font</b>: servia no HTML 4 para mudar a cor, tamanho e tipo da fonte diretamente no HTML, porém não deve mais ser usada, o ideal é formatar no CSS;</li>
+            <blockquote>Exemplo: "font color="blue", size="2", face="Verdana"</blockquote>
+            <blockquote>Resultado: <font color="blue" size="2" face="Verdana">Olá, mundo!</font></blockquote>
+            <li><b>img</b>: adiciona uma imagem. Obs: essa tag não precisa ser fechada;</li>
+            <li><b>a</b>: âncora, adicionar links;</li>
+            <li><b>abbr</b>: serve para indicar que uma palavra ou sigla é uma abreviação, e ao passar o mouse por cima, aparece um balãozinho com o significado</li>
+            <blockquote>Exemplo: "abbr title="HyperText Markup Language">HTML" </blockquote>
+            <blockquote>Resultado: <abbr title="HyperText Markup Language">HTML</abbr></blockquote>
+        </ul>
+        Os <strong>atributos</strong> usados nas tags, dão informações extras, um exemplo é o uso do <u>href</u> onde define o link de destino quando se quer adicionar um link na sua página da web.
+    </p>
+    <a href="#inicio"><small>Voltar para o início</small></a>
+
+    <h2 id="formatando-textos">Formatando textos</h2>
+    <p>
+        No HTML, é possivel formatar seu texto utilizando tags de formatação, embora seja possivel também realizar isso no CSS.
+        Alguns exemplos dessas tags são:
+        <ul>
+            <li><b>b</b>: deixa o texto em <b>negrito</b> somente visualmente;</li>
+            <li><b>strong</b>: deixa o texto também em <strong>negrito</strong>, porém de forma semântica, o que é melhor para acessibilidade;</li>
+            <li><b>i</b>: deixa o texto <i>itálico</i>, visualmente;</li>
+            <li><b>u</b>: deixa o texto <u>sublinhado</u>;</li>
+            <li><b>mark</b>: deixa o texto <mark>destacado</mark>;</li>
+            <li><b>small</b>: deixa o texto <small>pequeno</small>;</li>
+            <li><b>del</b>: deixa o texto <del>riscado</del> ou <del>removido</del>;</li>
+            <li><b>sub</b>: deixa o texto em subscrito(abaixo);</li>
+            <blockquote>Exemplo: H<sub>2</sub>O</blockquote>
+            <li><b>sup</b>: deixa o texto em sobrescrito(acima);</li>
+            <blockquote>Exemplo: 2<sup>10</sup></blockquote>
+        </ul>
+    </p>
+    <a href="#inicio"><small>Voltar para o início</small></a>
+
+    <h2 id="adicionando-midias">Como adicionar mídias</h2>
+    <p>
+        De forma bem simples, as tags utilizadas para adicionar mídias são intuitivas e utilizam atributos. 
+    </p>
+        <h3>Imagens</h3>
+            <p>
+                As imagens usam a tag <b>img</b> que não tem fechamento. Dentro dela utiliza-se o <b>src</b> no qual indica o caminho ou o link da imagem.
+                Porém, se por ventura, a imagem não carregar, pode-se utilizar o <b>alt</b> que seria um texto alternativo, tanto pra casos que a imagem não carregue ou até para leitores de tela.
+            </p>    
+        <h3>Vídeos</h3>
+            <p>
+                Os videos usam a tag <b>video</b> e nesse é possivel utilizar o <b>width</b> para mensurar a largura do video, e o <b>controls</b> para mostrar os controles.
+            </p>
+        <h3>Áudios</h3>
+            <p>
+                Os áudios usam a tag <b>audio</b> e também, assim como nos videos, é possivel adicionar o <b>controls</b> para mostrar os controles (play, pause, volume). 
+                Para adicionar o caminho do arquivo, utiliza-se o <b>source</b>.
+            </p>
+        <h3>Mídias Externas</h3>
+            <p>
+                Caso queira adicionar mídias de locais externos, como Youtube, também é possivel, só utilizar o <b>iframe</b>.
+            </p>
+    <a href="#inicio"><small>Voltar para o início</small></a>
+    <hr />
+
+    <h2 id="referencias">Links de referências</h2>
+    <ul>
+        <li><a href="https://web.dio.me/track/santander-2025-front-end/course/estruturando-seu-html-formatacoes/learning/a71dd4d8-a9b4-4d6f-82fb-29bdd3eec255?autoplay=1" target="_blank">https://web.dio.me/track/santander-2025-front-end/course/estruturando-seu-html-formatacoes/learning/a71dd4d8-a9b4-4d6f-82fb-29bdd3eec255?autoplay=1</a></li>
+        <li><a href="https://web.dio.me/track/santander-2025-front-end/course/trabalhando-com-midias/learning/78436226-5e62-44ca-9cce-bb50cbe2bb6c?autoplay=1" target="_blank">https://web.dio.me/track/santander-2025-front-end/course/trabalhando-com-midias/learning/78436226-5e62-44ca-9cce-bb50cbe2bb6c?autoplay=1</a></li>
+        <li><a href="https://www.w3schools.com/TAGS/default.asp" target="_blank">https://www.w3schools.com/TAGS/default.asp</a></li>
+    </ul>
+    <a href="#inicio"><small>Voltar para o início</small></a>
+</body>
+</html>
